@@ -1,6 +1,6 @@
 (function() {
     // Initialize homepage
-    loadDoc('../html/biography.html', (xhttp) => {
+    loadDoc('/html/biography.html', (xhttp) => {
         document.getElementById('title').innerHTML = 'Biography';
         document.getElementById('content').innerHTML = xhttp.responseText;
     });
@@ -89,7 +89,7 @@ function changeWindow(title, url) {
 
     function createWindow() {
         window.remove();
-        loadDoc('../html/' + url + '.html', (xhttp) => {
+        loadDoc('/html/' + url + '.html', (xhttp) => {
             document.getElementById('title').innerHTML = title;
             document.getElementById('content').innerHTML = xhttp.responseText;
         });
